@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FishCollector</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="menu_my_trophy">Мои трофеи</string>
+    <string name="menu_recent_update">Последние действия</string>
+</resources>

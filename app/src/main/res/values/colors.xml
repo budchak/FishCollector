@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0095FF</color>
+    <color name="colorPrimaryDark">#002D4D</color>
+    <color name="colorAccent">#536DFE</color>
+    <color name="colorLightPrimary">#C5CAE9</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorDivider">#BDBDBD</color>
+
+
+    <color name="blueThemeMain">#0095FF</color>
+    <color name="blueThemeSupport">#406580</color>
+    <color name="blueThemeBackground">#002D4D</color>
+    <color name="blueThemeToolbar">#80CAFF</color>
+    <color name="blueThemeMenu">#E6F4FF</color>
+</resources>
