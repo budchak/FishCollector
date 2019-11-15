@@ -42,7 +42,7 @@ public class AppNavigator {
 
 
     public void navigateToDetailScreen(int id) {
-
+        controller.navigate(R.id.newTrophyFragment);
     }
 
 

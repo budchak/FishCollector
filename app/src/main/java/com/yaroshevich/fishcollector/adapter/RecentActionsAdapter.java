@@ -3,12 +3,11 @@ package com.yaroshevich.fishcollector.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
 import com.yaroshevich.fishcollector.R;
-import com.yaroshevich.fishcollector.listener.RecyclerViewClickListener;
+import com.yaroshevich.fishcollector.ui.listener.RecyclerViewClickListener;
 import com.yaroshevich.fishcollector.model.RecentUpdate;
 import com.yaroshevich.fishcollector.viewHolder.BaseViewHolder;
 import com.yaroshevich.fishcollector.viewHolder.RecentActionHolder;

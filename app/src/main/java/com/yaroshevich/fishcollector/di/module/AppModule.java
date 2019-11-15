@@ -2,13 +2,10 @@ package com.yaroshevich.fishcollector.di.module;
 
 
 import android.content.Context;
-
-import com.yaroshevich.trophies.Repository.FishRepository;
-import com.yaroshevich.trophies.Repository.PreviewRepository;
-import com.yaroshevich.trophies.room.DB;
-import com.yaroshevich.trophies.room.FishInfoDatabase;
-import com.yaroshevich.trophies.util.ImageLoader;
-import com.yaroshevich.trophies.util.ScreenSizeManager;
+import com.yaroshevich.fishcollector.model.room.DB;
+import com.yaroshevich.fishcollector.model.room.FishInfoDatabase;
+import com.yaroshevich.fishcollector.util.ImageLoader;
+import com.yaroshevich.fishcollector.util.ScreenSizeManager;
 
 import javax.inject.Singleton;
 
@@ -27,41 +24,29 @@ public class AppModule {
 
     @Provides
     @Singleton
-    Context getAppContext(){
+    Context getAppContext() {
         return this.context;
     }
 
     @Provides
     @Singleton
-    FishInfoDatabase getDatabase(DB db){
+    FishInfoDatabase getDatabase(DB db) {
         return db.getDB();
     }
 
     @Provides
     @Singleton
-    DB getDB(Context context){
+    DB getDB(Context context) {
         return new DB(context);
     }
 
     @Provides
-    @Singleton
-    FishRepository getFishRepository(){
-        return new FishRepository();
-    }
-
-    @Provides
-    @Singleton
-    PreviewRepository getPreviewRepository(){
-        return new PreviewRepository();
-    }
-
-    @Provides
-    ImageLoader getImageLoader(){
+    ImageLoader getImageLoader() {
         return new ImageLoader(context);
     }
 
     @Provides
-    ScreenSizeManager provideScreenSizeManager(Context context){
+    ScreenSizeManager provideScreenSizeManager(Context context) {
         return new ScreenSizeManager(context);
     }
 

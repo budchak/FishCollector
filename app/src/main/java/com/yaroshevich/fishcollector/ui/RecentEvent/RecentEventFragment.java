@@ -13,11 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.yaroshevich.fishcollector.R;
 import com.yaroshevich.fishcollector.adapter.RecentActionsAdapter;
-import com.yaroshevich.fishcollector.fragment.NavigationDriverFragment;
-import com.yaroshevich.fishcollector.listener.RecyclerViewClickListener;
+import com.yaroshevich.fishcollector.ui.fragment.NavigationDriverFragment;
+import com.yaroshevich.fishcollector.ui.listener.RecyclerViewClickListener;
 import com.yaroshevich.fishcollector.model.RecentUpdate;
 import com.yaroshevich.fishcollector.navigation.AppNavigator;
-import com.yaroshevich.fishcollector.repositiry.RecentUpdateRepository;
+import com.yaroshevich.fishcollector.model.repositiry.RecentUpdateRepository;
 
 import java.util.List;
 
@@ -55,6 +55,7 @@ public class RecentEventFragment extends NavigationDriverFragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "fab", Toast.LENGTH_SHORT).show();
+                AppNavigator.getInstance(null).navigateToDetailScreen(0);
             }
         });
         AppNavigator.getInstance(null);

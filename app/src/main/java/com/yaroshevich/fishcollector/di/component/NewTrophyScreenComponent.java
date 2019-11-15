@@ -1,10 +1,10 @@
 package com.yaroshevich.fishcollector.di.component;
 
 
-import com.yaroshevich.trophies.di.module.NewTrophyScreenModule;
-import com.yaroshevich.trophies.di.spore.FragmentSpore;
-import com.yaroshevich.trophies.model.ObservableTrophy;
-import com.yaroshevich.trophies.ui.newTrophy.NewTrophyFragment;
+import com.yaroshevich.fishcollector.di.module.NewTrophyScreenModule;
+import com.yaroshevich.fishcollector.di.spore.FragmentSpore;
+import com.yaroshevich.fishcollector.model.Trophy;
+import com.yaroshevich.fishcollector.ui.newTrophy.NewTrophyFragment;
 
 import dagger.Subcomponent;
 
@@ -13,5 +13,4 @@ import dagger.Subcomponent;
 @FragmentSpore
 public interface NewTrophyScreenComponent {
     void inject(NewTrophyFragment fragment);
-    ObservableTrophy getTrophy();
 }

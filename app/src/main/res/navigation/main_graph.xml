@@ -10,4 +10,9 @@
         android:name="com.yaroshevich.fishcollector.ui.RecentEvent.RecentEventFragment"
         android:label="fragment_container_with_navigation_driver"
         tools:layout="@layout/fragment_container_with_navigation_driver" />
+    <fragment
+        android:id="@+id/newTrophyFragment"
+        android:name="com.yaroshevich.fishcollector.ui.newTrophy.NewTrophyFragment"
+        android:label="fragment_new_trophy"
+        tools:layout="@layout/fragment_container_with_collapsing_toolbar" />
 </navigation>

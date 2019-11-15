@@ -1,8 +1,8 @@
 package com.yaroshevich.fishcollector.di.component;
 
-import com.yaroshevich.trophies.di.module.MainActivityModule;
-import com.yaroshevich.trophies.di.spore.ActivitySpore;
-import com.yaroshevich.trophies.ui.MainActivity;
+import com.yaroshevich.fishcollector.di.module.MainActivityModule;
+import com.yaroshevich.fishcollector.di.spore.ActivitySpore;
+import com.yaroshevich.fishcollector.ui.MainActivity;
 
 import dagger.Subcomponent;
 

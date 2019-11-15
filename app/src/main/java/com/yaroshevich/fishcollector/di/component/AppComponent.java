@@ -3,15 +3,9 @@ package com.yaroshevich.fishcollector.di.component;
 
 import android.content.Context;
 
-import com.yaroshevich.trophies.Repository.FishRepository;
-import com.yaroshevich.trophies.Repository.PreviewRepository;
-import com.yaroshevich.trophies.di.module.AppModule;
-import com.yaroshevich.trophies.di.module.MainActivityModule;
-import com.yaroshevich.trophies.di.module.NewTrophyScreenModule;
-import com.yaroshevich.trophies.di.module.PreviewModule;
-import com.yaroshevich.trophies.room.FishInfoDatabase;
-import com.yaroshevich.trophies.util.ImageLoader;
-import com.yaroshevich.trophies.util.ScreenSizeManager;
+import com.yaroshevich.fishcollector.di.module.AppModule;
+import com.yaroshevich.fishcollector.di.module.MainActivityModule;
+import com.yaroshevich.fishcollector.di.module.NewTrophyScreenModule;
 
 import javax.inject.Singleton;
 
@@ -22,15 +16,10 @@ import dagger.Component;
 public interface AppComponent {
 
     Context getContext();
-    ImageLoader getImageLoader();
-    FishInfoDatabase getDatabase();
-    FishRepository getFishRepository();
-    PreviewRepository getPreviewRepository();
-    ScreenSizeManager getScreeSizeManager();
-    NewTrophyScreenComponent plusNewTrophyComponent(NewTrophyScreenModule listModule);
-    PreviewComponent plusPreviewComponent(PreviewModule listModule);
-    MainActivityComponent plusMainActivityComponent(MainActivityModule mainActivity);
 
+    NewTrophyScreenComponent plusNewTrophyComponent(NewTrophyScreenModule listModule);
+
+    MainActivityComponent plusMainActivityComponent(MainActivityModule mainActivity);
 
 
 }

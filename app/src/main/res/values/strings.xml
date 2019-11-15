@@ -4,4 +4,5 @@
     <string name="close">close</string>
     <string name="menu_my_trophy">Мои трофеи</string>
     <string name="menu_recent_update">Последние действия</string>
+    <string name="menu_item_title_add">add</string>
 </resources>

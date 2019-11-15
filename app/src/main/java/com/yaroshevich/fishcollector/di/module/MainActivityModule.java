@@ -1,12 +1,10 @@
 package com.yaroshevich.fishcollector.di.module;
 
 
-
-
 import androidx.appcompat.app.ActionBar;
 
-import com.yaroshevich.trophies.di.spore.ActivitySpore;
-import com.yaroshevich.trophies.ui.MainActivity;
+import com.yaroshevich.fishcollector.di.spore.ActivitySpore;
+import com.yaroshevich.fishcollector.ui.MainActivity;
 
 import dagger.Module;
 import dagger.Provides;
@@ -21,14 +19,14 @@ public class MainActivityModule {
     }
 
     @Provides
-    MainActivity provideMainActivity(){
+    MainActivity provideMainActivity() {
         return mainActivity;
     }
 
 
     @ActivitySpore
     @Provides
-    ActionBar provideActionBar(){
+    ActionBar provideActionBar() {
         return mainActivity.getSupportActionBar();
     }
 }
