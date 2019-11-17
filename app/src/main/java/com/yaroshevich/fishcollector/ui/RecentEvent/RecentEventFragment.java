@@ -2,6 +2,7 @@ package com.yaroshevich.fishcollector.ui.RecentEvent;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -24,9 +25,10 @@ import java.util.List;
 public class RecentEventFragment extends NavigationDriverFragment {
 
     private RecyclerView recyclerView;
-
+    private AppNavigator navigator;
 
     public RecentEventFragment() {
+
     }
 
     @Override
@@ -34,12 +36,14 @@ public class RecentEventFragment extends NavigationDriverFragment {
         super.setLogTag("RecentEventFragment");
     }
 
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         setContentView(R.layout.fragment_recycler_view);
-
+        navigator = AppNavigator.getInstance(null);
         List<RecentUpdate> list = new RecentUpdateRepository().getAll();
         RecentActionsAdapter actionsAdapter = new RecentActionsAdapter(null);
         actionsAdapter.setClickListener(new RecyclerViewClickListener() {
@@ -55,7 +59,7 @@ public class RecentEventFragment extends NavigationDriverFragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "fab", Toast.LENGTH_SHORT).show();
-                AppNavigator.getInstance(null).navigateToDetailScreen(0);
+                navigator.navigateToDetailScreen(0);
             }
         });
         AppNavigator.getInstance(null);
@@ -64,5 +68,13 @@ public class RecentEventFragment extends NavigationDriverFragment {
         recyclerView.setAdapter(actionsAdapter);
 
         return view;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()){
+            case R.id.nav_gallery: navigator.navigateWaterTabScreen();
+        }
+        return false;
     }
 }

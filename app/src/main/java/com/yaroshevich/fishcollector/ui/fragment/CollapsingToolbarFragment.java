@@ -1,5 +1,6 @@
 package com.yaroshevich.fishcollector.ui.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,26 +13,26 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.yaroshevich.fishcollector.R;
 import com.yaroshevich.fishcollector.ui.fragment.base.BaseFragment;
 
 public class CollapsingToolbarFragment extends BaseFragment {
 
     private Toolbar toolbar;
-    private FrameLayout content;
+    public FrameLayout content;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
 
-    @Override
-    public void setLogTag(String tag) {
-        super.setLogTag("CollapsingToolbar");
-    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         view = inflater.inflate(R.layout.fragment_container_with_collapsing_toolbar, container, false);
+        collapsingToolbarLayout = view.findViewById(R.id.fish_info_collapsing_toolbar);
+        collapsingToolbarLayout.setTitleEnabled(false);
         toolbar = view.findViewById(R.id.toolbar);
-        content = view.findViewById(R.id.navigation_context);
+        content = view.findViewById(R.id.content_container);
         return view;
     }
 
@@ -39,9 +40,16 @@ public class CollapsingToolbarFragment extends BaseFragment {
         getLayoutInflater().inflate(layoutRes, content, true);
     }
 
+    public void setContentView(View view) {
+        content.removeAllViews();
+        content.addView(view);
+    }
+
     public ToolbarBuilder getToolbarBuilder(){
         return new ToolbarBuilder();
     }
+
+
 
     public class ToolbarBuilder{
 

@@ -79,8 +79,5 @@ public abstract class NavigationDriverFragment extends BaseFragment implements N
         }
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        return false;
-    }
+
 }

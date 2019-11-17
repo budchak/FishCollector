@@ -15,4 +15,24 @@
         android:name="com.yaroshevich.fishcollector.ui.newTrophy.NewTrophyFragment"
         android:label="fragment_new_trophy"
         tools:layout="@layout/fragment_container_with_collapsing_toolbar" />
+    <dialog
+        android:id="@+id/dateDialogFragment"
+        android:name="com.yaroshevich.fishcollector.ui.newTrophy.dialog.DateDialogFragment"
+        android:label="dialog_add_date"
+        tools:layout="@layout/dialog_add_date" />
+    <dialog
+        android:id="@+id/placeDialogFragment"
+        android:name="com.yaroshevich.fishcollector.ui.newTrophy.dialog.PlaceDialogFragment"
+        android:label="dialog_add_places"
+        tools:layout="@layout/dialog_add_places" />
+    <dialog
+        android:id="@+id/weightDialogFragment"
+        android:name="com.yaroshevich.fishcollector.ui.newTrophy.dialog.WeightDialogFragment"
+        android:label="dialog_add_weight"
+        tools:layout="@layout/dialog_add_weight" />
+    <fragment
+        android:id="@+id/waterTabFragment"
+        android:name="com.yaroshevich.fishcollector.ui.waterInfo.WaterTabFragment"
+        android:label="fragment_water_info"
+        tools:layout="@layout/fragment_water_info" />
 </navigation>

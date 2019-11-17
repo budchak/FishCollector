@@ -45,6 +45,21 @@ public class AppNavigator {
         controller.navigate(R.id.newTrophyFragment);
     }
 
+    public void navigateWeightDialog() {
+        controller.navigate(R.id.weightDialogFragment);
+    }
+
+    public void navigatePlaceDialog() {
+        controller.navigate(R.id.placeDialogFragment);
+    }
+
+    public void navigateDateDialog() {
+        controller.navigate(R.id.dateDialogFragment);
+    }
+
+    public void navigateWaterTabScreen(){
+        controller.navigate(R.id.waterTabFragment);
+    }
 
 
 
